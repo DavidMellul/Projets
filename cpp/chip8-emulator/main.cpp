@@ -1,6 +1,9 @@
 #include "Emulateur.h"
 #include <SDL/SDL.h>
 
+#ifdef main
+#undef main
+#endif  //pour l'output sur la console
 using namespace std;
 
 bool handleInput(Emulateur *chip8);
