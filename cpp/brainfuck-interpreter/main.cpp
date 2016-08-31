@@ -117,7 +117,7 @@ void interpreterCode(std::string str) throw (std::logic_error)
                                 }while(nbCouples != 0);
                             }
                         }
-                            break;
+                        break;
                 case ']':
                          {
                             int nbCouples = 0;
@@ -128,12 +128,12 @@ void interpreterCode(std::string str) throw (std::logic_error)
                                 pointeurEntree--;
                             }while(nbCouples != 0);
                          }
-                            break;
+                        break;
                 default: break;
             }
             pointeurEntree++;
         }
-             std::cout << "-----Fin du programme-----" << std::endl << std::endl;
+             std::cout << std::endl << "-----Fin du programme-----" << std::endl << std::endl;
 }
 
 
