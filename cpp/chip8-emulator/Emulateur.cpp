@@ -370,7 +370,7 @@ void Emulateur::emulateCycle()
     if(sound_timer > 0)
     {
         if(sound_timer == 1)
-          cout << "BEEP" << endl;
+          cout << "\a" << endl;
         --sound_timer;
     }
 }
