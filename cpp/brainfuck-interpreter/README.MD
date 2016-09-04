@@ -1,1 +1,1 @@
-BFI : Un interpréteur du célébre langage éxotique Brainfuck.
+# BFI : Un interpréteur du célébre langage éxotique Brainfuck.
