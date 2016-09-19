@@ -20,6 +20,8 @@ void display(int m[NB_CELL_X][NB_CELL_Y]);
 void copy(int m[NB_CELL_X][NB_CELL_Y], int m2[NB_CELL_X][NB_CELL_Y]);
 void random(int m[NB_CELL_X][NB_CELL_Y]);
 
+void help();
+
 bool paused = true;
 bool drag = false;
 bool dragging = false;
@@ -40,6 +42,8 @@ int main(int argc, char* argv[])
 
     Uint32 start;
     srand(time(NULL));
+
+    help();
     while(handleInput(matrice))
     {
         start = SDL_GetTicks();
@@ -331,4 +335,21 @@ void random(int m[NB_CELL_X][NB_CELL_Y])
             m[i][j] = RAND(0,1);
 
             draw(m);
+}
+
+void help()
+{
+    std::cout << "NAME" << std::endl;
+    std::cout << "\tconway - Une simulation du jeu de la vie" << std::endl;
+    std::cout << "SYNOPSIS" << std::endl;
+    std::cout << "\tconway" << std::endl;
+    std::cout << "DESCRIPTION" << std::endl;
+    std::cout << "\tconway est un programme réalisé en C++ permettant de simuler l'automate cellulaire du jeu de la vie." << std::endl;
+    std::cout << "UTILISATION" << std::endl;
+    std::cout << "\tp : pause | resume" << std::endl;
+    std::cout << "\td : drag enabled | drag disabled" << std::endl;
+    std::cout << "\te : erase" << std::endl;
+    std::cout << "\tr : random" << std::endl;
+    std::cout << "AUTHOR" << std::endl;
+    std::cout << "\tDavid Mellul" << std::endl;
 }
