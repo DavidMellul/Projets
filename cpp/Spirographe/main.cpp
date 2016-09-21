@@ -16,18 +16,6 @@ bool equals(Point p1, Point p2);
 
 int main(int argc, char* argv[])
 {
-    if(argc != 1)
-    {
-        if(argc == 2)
-        {
-            if(strcmp(argv[1], "/s") != 0)
-                exit(0);
-        }
-    }
-    else
-    {
-        exit(0);
-    }
     srand(time(NULL));
 
     SDL_SetVideoMode(0,0, 0, SDL_HWSURFACE | SDL_DOUBLEBUF | SDL_FULLSCREEN);
@@ -62,7 +50,17 @@ int main(int argc, char* argv[])
                 break;
 
                 case SDL_KEYDOWN:
-                    quit = true;
+                    if(event.key.keysym.sym == SDLK_ESCAPE)
+                        quit = true;
+                    else if(event.key.keysym.sym == SDLK_r)
+                    {
+                        reset(c,c2,d,angle);
+                        Tableau.clear();
+                    }
+                    else if(event.key.keysym.sym == SDLK_p)
+                    {
+                        paused = !paused;
+                    }
                 break;
 
                 case SDL_MOUSEMOTION:
@@ -86,12 +84,6 @@ int main(int argc, char* argv[])
                 for(Point p : Tableau)
                     if(isInWindow(p))
                         DrawHandler::draw(p);
-                if(Tableau.size() > 1000 && equals(d.getExtremite(), Tableau.at(1))  )
-                {
-                   Tableau.clear();
-                   reset(c, c2, d, angle);
-                   SDL_Delay(2000);
-                }
            DrawHandler::endDraw();
            SDL_Flip(ECRAN);
         }
