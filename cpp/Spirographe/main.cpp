@@ -16,6 +16,7 @@ void help();
 
 int main()
 {
+    help();
     // Lancement du générateur de nombres aléatoires
     srand(time(NULL));
 
