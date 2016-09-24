@@ -9,7 +9,7 @@
 #include <thread>
 
 
-#define M_PI 3.14
+#define M_PI 3.14159265359
 
 //
 
@@ -29,5 +29,16 @@
 //
 
 #define RAND(MIN, MAX)  ((rand() % (MAX - MIN +1)) + MIN)
+#define MIN(A,B) ((A < B) ? A:B)
+#define MAX(A,B) ((A > B) ? A:B)
+
+#define NB_MIN_BRAS 2
+#define NB_MAX_BRAS 3
+
+#define MIN_SPEED -100
+#define MAX_SPEED 100
+
+#define MIN_TAILLE 1
+#define MAX_TAILLE 300
 
 #endif // UTILITIES_H_INCLUDED

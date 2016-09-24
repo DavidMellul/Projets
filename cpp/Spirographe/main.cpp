@@ -1,43 +1,41 @@
 #include "utilities.h"
 
 #include "Point.h"
-#include "Droite.h"
 #include "DrawHandler.h"
 #include "Computer.h"
-
-using namespace std;
+#include "Bras.h"
 
 #undef main
 
-void reset(Cercle &c, Cercle &c2, Droite &d, double &a);
-bool isInWindow(Point p);
-bool equals(Point p1, Point p2);
+using namespace std;
 
+void reset(vector<Bras>& l, vector<Point>& p, double& period, double& deltaPeriod);
+bool isInWindow(Point A);
+double dist(Point A, Point B);
+void help();
 
-int main(int argc, char* argv[])
+int main()
 {
+    // Lancement du générateur de nombres aléatoires
     srand(time(NULL));
 
-    SDL_SetVideoMode(0,0, 0, SDL_HWSURFACE | SDL_DOUBLEBUF | SDL_FULLSCREEN);
+    // Initialisation de la SDL
+    SDL_SetVideoMode(0, 0, 32, SDL_HWSURFACE | SDL_DOUBLEBUF |SDL_FULLSCREEN);
     SDL_WM_SetCaption("Spirographe - David Mellul", NULL);
     SDL_ShowCursor(false);
 
-    vector<Point>Tableau;
+    vector<Bras>  l;
+    vector<Point> p;
+    double period;
+    double deltaPeriod;
 
-    Cercle c;
-    Cercle c2;
-    Droite d;
-
-    double tours = 0;
-    double angle = 0;
+    double pX = 0;
+    double pY = 0;
 
     bool quit = false;
     bool paused = false;
 
-
-    reset(c,c2,d, angle);
-    DrawHandler::setColor(0xFF00FF);
-
+    reset(l,p,period, deltaPeriod);
     while(!quit)
     {
         SDL_Event e;
@@ -50,85 +48,105 @@ int main(int argc, char* argv[])
                 break;
 
                 case SDL_KEYDOWN:
-                    if(event.key.keysym.sym == SDLK_ESCAPE)
+                    if(e.key.keysym.sym == SDLK_ESCAPE)
                         quit = true;
-                    else if(event.key.keysym.sym == SDLK_r)
-                    {
-                        reset(c,c2,d,angle);
-                        Tableau.clear();
-                    }
-                    else if(event.key.keysym.sym == SDLK_p)
-                    {
+                    else if(e.key.keysym.sym == SDLK_p)
                         paused = !paused;
+                    else if(e.key.keysym.sym == SDLK_r)
+                    {
+                        SDL_FillRect(ECRAN, NULL, BLACK);
+                        reset(l,p, period, deltaPeriod);
                     }
-                break;
 
-                case SDL_MOUSEMOTION:
-                    if(SDL_GetTicks() > 1000)
-                        quit = true;
-                break;
-
+                    break;
                 default: break;
             }
         }
         if(!paused)
         {
-          tours++;
-          SDL_FillRect(ECRAN, NULL, BLACK);
           DrawHandler::startDraw();
-                Computer::Rotate(c2.getCenter(), c.getCenter(),(M_PI*0.10)/180);
-                d.setOrigine(c2.getCenter());
-                d.setExtremite(Point(c2.getCx()+(c2.getRadius()*2), c2.getCy()));
-                Computer::Rotate(d.getExtremite(), d.getOrigine(), (M_PI*angle)*0.01*tours/180);
-                Tableau.push_back(d.getExtremite());
-                for(Point p : Tableau)
-                    if(isInWindow(p))
-                        DrawHandler::draw(p);
+            period = period + deltaPeriod;
+
+            pX = 0;
+            pY = 0;
+            for(int i = 0; i < l.size(); i++)
+             {
+                pX += l.at(i).getTaille() * cos(l.at(i).getVitesse() * period + l.at(i).getOrigine());
+                pY += l.at(i).getTaille() * sin(l.at(i).getVitesse() * period + l.at(i).getOrigine());
+             }
+             pX+= ECRAN->w/2;
+             pY+= ECRAN->h/2;
+
+            if(isInWindow(Point(pX, pY)))
+                DrawHandler::draw(Point(pX,pY));
+
+            DrawHandler::setColor(dist(Point(pX, pY), Point(ECRAN->w/2,ECRAN->h/2))+0xFF00FF);
+
            DrawHandler::endDraw();
            SDL_Flip(ECRAN);
-        }
 
+           // Actualisation de l'écran
+
+        }
     }
     return 0;
 }
 
-void reset(Cercle& c, Cercle& c2, Droite& d, double &a)
+void reset(vector<Bras>& l, vector<Point>& p, double& period, double& deltaPeriod)
 {
-    const SDL_VideoInfo *vi = SDL_GetVideoInfo();
+    l.clear(); p.clear(); period = 0; deltaPeriod = 0;
 
-    int cRadius = RAND(50, 300);
-    int c2Radius = RAND(-cRadius/2, cRadius/2);
-    int tailleStylo = RAND(-c2Radius*2, c2Radius*2);
+    const SDL_VideoInfo vi = *SDL_GetVideoInfo();
+    int nbBras = RAND(NB_MIN_BRAS, NB_MAX_BRAS);
 
-    c.setCenter(Point(vi->current_w/2, vi->current_h/2));
-    c.setRadius(cRadius);
+    for(int i = 0; i < nbBras; i++)
+    {
+        l.push_back(Bras(
+                         RAND(MIN_TAILLE, MAX_TAILLE),
+                         RAND(MIN_SPEED, MAX_SPEED),
+                         0));
+        if(i == 0)
+            l.back().setOrigine(vi.current_w/2);
+        else if(i > 0)
+            l.back().setOrigine(l.at(l.size()-2).getOrigine() + l.at(l.size()-2).getTaille());
+    }
 
-    c2.setCenter(Point(c.getCx()+cRadius+c2Radius, c.getCy()));
-    c2.setRadius(abs(c2Radius));
-    Computer::Rotate(c2.getCenter(), c.getCenter(), RAND(-360,360));
-
-    d.setOrigine(c2.getCenter());
-    d.setExtremite(Point(c2.getCx()+(tailleStylo), c2.getCy()));
-
-    a = RAND(-360,360);
+    deltaPeriod = ((double)rand()/(float)(RAND_MAX)) * 0.001;
 }
 
-bool isInWindow(Point p)
+bool isInWindow(Point A)
 {
-    int x = p.getX();
-    int y = p.getY();
-    const SDL_VideoInfo *vi = SDL_GetVideoInfo();
-
-    if(x > 0 && x < vi->current_w
-    && y > 0 && y < vi->current_h)
+    const SDL_VideoInfo vi = *SDL_GetVideoInfo();
+    if(A.getX() > 0 && A.getX() < vi.current_w
+       && A.getY() > 0 && A.getY() < vi.current_h)
         return true;
     return false;
 }
 
-bool equals(Point p1, Point p2)
+double dist(Point A, Point B)
 {
-    int diffX = p1.getX() - p2.getX();
-    int diffY = p1.getY() - p2.getY();
-   return diffX >= -1 && diffX <= 1 && diffY >= -1 && diffY <= 1;
+    double x1 = MAX(A.getX(), B.getX());
+    double y1 = MAX(A.getY(), B.getY());
+    double x2 = MIN(A.getX(), B.getX());
+    double y2 = MIN(A.getY(), B.getY());
+
+    return sqrt( ((x2 - x1) * (x2 - x1)) + ((y2 - y1) * (y2 - y1)) );
 }
+
+void help()
+{
+    std::cout << "NAME" << std::endl;
+    std::cout << "\tspg - Un spirographe" << std::endl;
+    std::cout << "SYNOPSIS" << std::endl;
+    std::cout << "\tspg" << std::endl;
+    std::cout << "DESCRIPTION" << std::endl;
+    std::cout << "\tspg est un programme réalisé en C++ permettant de reproduire aléatoirement le comportement d'un spirographe." << std::endl;
+    std::cout << "UTILISATION" << std::endl;
+    std::cout << "\tp : pause | resume" << std::endl;
+    std::cout << "\tr : reset" << std::endl;
+    std::cout << "\tescape : quitter" << std::endl;
+    std::cout << "AUTHOR" << std::endl;
+    std::cout << "\tDavid Mellul" << std::endl;
+}
+
 

@@ -14,9 +14,7 @@ class DrawHandler
         static void startDraw();
         static void endDraw();
 
-        static void draw(Droite d);
         static void draw(Point p);
-        static void draw(Cercle c);
 
         static void setColor(Uint32 color);
 

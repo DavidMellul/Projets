@@ -16,9 +16,17 @@ void Computer::Rotate(Point& A, Point B, double angle)
     double x3 = cos(angle) * (x1-x2) - sin(angle) * (y1-y2) + x2;
     double y3 = sin(angle) * (x1-x2) + cos(angle) * (y1-y2) + y2;
 
+
+
     A.setX(x3);
     A.setY(y3);
 }
+
+double Computer::toRadians(double angle)
+{
+    return (angle*M_PI)/180;
+}
+
 
 Computer::~Computer()
 {
