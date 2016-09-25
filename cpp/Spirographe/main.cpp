@@ -2,7 +2,6 @@
 
 #include "Point.h"
 #include "DrawHandler.h"
-#include "Computer.h"
 #include "Bras.h"
 
 #undef main
@@ -17,7 +16,7 @@ void help();
 int main()
 {
     help();
-    // Lancement du générateur de nombres aléatoires
+    // Lancement du gÃ©nÃ©rateur de nombres alÃ©atoires
     srand(time(NULL));
 
     // Initialisation de la SDL
@@ -86,7 +85,7 @@ int main()
            DrawHandler::endDraw();
            SDL_Flip(ECRAN);
 
-           // Actualisation de l'écran
+           // Actualisation de l'Ã©cran
 
         }
     }
@@ -141,7 +140,7 @@ void help()
     std::cout << "SYNOPSIS" << std::endl;
     std::cout << "\tspg" << std::endl;
     std::cout << "DESCRIPTION" << std::endl;
-    std::cout << "\tspg est un programme réalisé en C++ permettant de reproduire aléatoirement le comportement d'un spirographe." << std::endl;
+    std::cout << "\tspg est un programme rÃ©alisÃ© en C++ permettant de reproduire alÃ©atoirement le comportement d'un spirographe." << std::endl;
     std::cout << "UTILISATION" << std::endl;
     std::cout << "\tp : pause | resume" << std::endl;
     std::cout << "\tr : reset" << std::endl;
