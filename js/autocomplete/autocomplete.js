@@ -45,18 +45,14 @@ $(document).ready( function() {
 					requete.onreadystatechange = function() {
 						if(requete.readyState == 4 && requete.status == 200) {
 							if(requete.responseText)
-							{
 								listeResultats = requete.responseText.split(' ').filter(function(v){return v!==''});
-								compteur = 1;
-							}
 							else 
 							{
-								listeResultats.push('Aucun resultat trouvé.');
+								listeResultats.push('<p>Aucun resultat trouvé.</p>');
 								recherche = '';
-								compteur = 0;
 							}
 
-							
+							compteur = 1;
 							for(var i = 0; i < listeResultats.length; i++)
 								$('#results').append('<p><span>'+recherche+'</span>'+listeResultats[i].substr(recherche.length,listeResultats[i].length)+'</p>');
 							
@@ -70,21 +66,22 @@ $(document).ready( function() {
 				}	
 			else
 			 {
-			 	if(listeResultats.length > 0)
+			 	if(listeResultats.length > 0 )
 			 	{
 			 		 	switch(e.which) 
 			 			{
-							case 13: 
-							case 39: 
+							case 13:  
 										$('#search').val(listeResultats[compteur-1]);
 										listeResultats = [];
 										$('#results').empty();
 										compteur = 0;
 									break;
 							case 38: 
+									if(compteur > 1)
 									 	compteur--; 
 									 break;
 							case 40:  
+									if(compteur < listeResultats.length)
 										compteur++; 
 									break;
 						}
