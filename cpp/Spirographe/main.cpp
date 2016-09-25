@@ -8,7 +8,7 @@
 
 using namespace std;
 
-void reset(vector<Bras>& l, vector<Point>& p, double& period, double& deltaPeriod);
+void reset(vector<Bras>& l, double& period, double& deltaPeriod);
 bool isInWindow(Point A);
 double dist(Point A, Point B);
 void help();
@@ -25,7 +25,6 @@ int main()
     SDL_ShowCursor(false);
 
     vector<Bras>  l;
-    vector<Point> p;
     double period;
     double deltaPeriod;
 
@@ -35,7 +34,7 @@ int main()
     bool quit = false;
     bool paused = false;
 
-    reset(l,p,period, deltaPeriod);
+    reset(l,period, deltaPeriod);
     while(!quit)
     {
         SDL_Event e;
@@ -55,7 +54,7 @@ int main()
                     else if(e.key.keysym.sym == SDLK_r)
                     {
                         SDL_FillRect(ECRAN, NULL, BLACK);
-                        reset(l,p, period, deltaPeriod);
+                        reset(l, period, deltaPeriod);
                     }
 
                     break;
@@ -92,9 +91,9 @@ int main()
     return 0;
 }
 
-void reset(vector<Bras>& l, vector<Point>& p, double& period, double& deltaPeriod)
+void reset(vector<Bras>& l, double& period, double& deltaPeriod)
 {
-    l.clear(); p.clear(); period = 0; deltaPeriod = 0;
+    l.clear();  period = 0; deltaPeriod = 0;
 
     const SDL_VideoInfo vi = *SDL_GetVideoInfo();
     int nbBras = RAND(NB_MIN_BRAS, NB_MAX_BRAS);
