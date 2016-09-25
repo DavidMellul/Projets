@@ -3,8 +3,6 @@
 
 #include "utilities.h"
 #include "Point.h"
-#include "Droite.h"
-#include "Cercle.h"
 
 class DrawHandler
 {
