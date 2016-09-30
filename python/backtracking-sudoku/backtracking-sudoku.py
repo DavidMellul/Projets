@@ -60,4 +60,4 @@ if(sudokuValide(sudoku,0)):
 		print()
 else:
   print("Aucune solution possible")
- print("---------- FIN DE L'ANALYSE ----------")
+print("---------- FIN DE L'ANALYSE ----------")
