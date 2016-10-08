@@ -19,5 +19,20 @@ Il s'agit de projets couvrant une multitude de thèmes différents, réalisés d
   - diff : Une reproduction de la commande diff sur Linux.
   - lbr : Une commande permettant de retirer les retours chariot d'un texte.
   - stats : Une commande permettant d'afficher quelques statistiques textuelles simple d'un texte.
- - Python
-  - img :
+- Python
+  - img : Un éditeur d'images en lignes de commandes.
+  - sudoku-checker : Un vérificateur de sudoku.
+  - backtracking-sudoku : Un résolveur de sudoku par backtracking.
+  - syracuse : Un programme permettant de déterminer le temps de vol d'un nombre dans la suite de Syracuse.
+  - fibonacci : Un programme permettant d'afficher la suite de fibonacci.
+- Javascript
+  - Autocomplete : Un utilitaire en JQuery / AJAX / PHP permettant d'autocompléter une saisie au clavier d'après une liste d'éléments.
+- PHP 
+  - FormulaireSaisie : Un formulaire quasi-persistant sans fichier ni accès à une base de données.
+ 
+ # A venir 
+ 
+ - Je prévois de réaliser des templates BootStrap pour réaliser des sites avec une expérience utilisateur innovante.
+ - J'aimerais également implémenter un visualiseur de fractales (Mandelbrot & Julia)
+ - Je travaille actuellement sur un jeu de plateformes en 2D (C++ / SDL).
+ - J'aimerais réaliser quelques jeux classiques (Snake / 2048 / Tron).
