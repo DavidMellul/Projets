@@ -22,6 +22,7 @@ Il s'agit de projets couvrant une multitude de thèmes différents, réalisés d
 - Python
   - img : Un éditeur d'images en lignes de commandes.
   - sudoku-checker : Un vérificateur de sudoku.
+  - sudoku-generator : Un générateur de sudoku.
   - backtracking-sudoku : Un résolveur de sudoku par backtracking.
   - syracuse : Un programme permettant de déterminer le temps de vol d'un nombre dans la suite de Syracuse.
   - fibonacci : Un programme permettant d'afficher la suite de fibonacci.
