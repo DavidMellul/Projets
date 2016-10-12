@@ -10,7 +10,7 @@ Il s'agit de projets couvrant une multitude de thèmes différents, réalisés d
   - tail-reloaded : Une reproduction basique de la commande tail sur Linux.
   - A venir : Une reproduction basique du bash sur Linux.
 - C++
-  - Spirographe : Un dessineur de courbes automatique inspirée du jouet intitulé Spirographe.
+  - <em>Spirographe</em> : Un dessineur de courbes automatique inspirée du jouet intitulé Spirographe.
   - BFI : Un interprêteur de BrainFuck.
   - Chip8 : Un émulateur de Chip8.
   - Conway : Une implémentation du jeu de la vie.
