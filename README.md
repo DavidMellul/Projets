@@ -3,8 +3,10 @@
 <p>
 Ce dépot GitHub est un recueil de tous les projets que j'ai réalisés à but éducatif.<br />
 Il s'agit de projets couvrant une multitude de thèmes différents, réalisés dans différents langages de programmation.<br />
-J'espère que mes codes pourront aider ceux qui les consultent. Pour toute demande : <u>david.mellul@outlook.fr</u><br />
-<em>nota-bene :</em>En cas d'erreur de ma part, je serais ravi d'être corrigé.</p>
+J'espère que mes codes pourront aider ceux qui les consultent. <br /><br />
+Pour toute demande : <a href="mailto:david.mellul@outlook.fr">david.mellul@outlook.fr</a><br />
+<b><em>nota-bene :</em></b>En cas d'erreur de ma part, je serais ravi d'être corrigé.
+</p>
 
 # Projets
 
@@ -30,7 +32,7 @@ J'espère que mes codes pourront aider ceux qui les consultent. Pour toute deman
   - <b>syracuse </b>: Un programme permettant de déterminer le temps de vol d'un nombre dans la suite de Syracuse.
   - <b>fibonacci </b>: Un programme permettant d'afficher la suite de fibonacci.
 - Javascript
-  - <b>Autocomplete </b>: Un utilitaire en JQuery / AJAX / PHP permettant d'autocompléter une saisie au clavier d'après une liste d'éléments.
+  - <b>Autocomplete </b>: Un utilitaire en JQuery / AJAX / PHP permettant d'autocompléter une saisie au clavier d'après une liste           d'éléments.
 - PHP 
   - <b>FormulaireSaisie</b>: Un formulaire quasi-persistant sans fichier ni accès à une base de données.
  
