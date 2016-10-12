@@ -77,7 +77,6 @@ sudoku = [
 
 tableauCasesVides = determinerCasesVides(sudoku)
 tableauPossibilites = determinerPossibilites(sudoku,tableauCasesVides)
-print(tableauPossibilites)
 
 print("---------- DEBUT DE L'ANALYSE ----------")
 if(sudokuValide(sudoku,0, tableauCasesVides,tableauPossibilites)):
