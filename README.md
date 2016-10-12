@@ -5,7 +5,7 @@
   Il s'agit de projets couvrant une multitude de thèmes différents, réalisés dans différents langages de programmation.<br />
   J'espère que mes codes pourront aider ceux qui les consultent. <br /><br />
 </p>
-  Pour toute demande : <u style="color:blue">david.mellul@outlook.fr</u>
+  Pour toute demande : david.mellul@outlook.fr
 <p>
   <b><em>nota-bene :</em></b>En cas d'erreur de ma part, je serais ravi d'être corrigé.
 </p>
