@@ -5,8 +5,10 @@ script php. On peut naviguer entre les résultats avec les fléches directionnel
 
 <b>Pour l'utiliser :</b>
   1. Créer un input :
-```javascript
-$(function(){
-  $('div').html('I am a div.');
-});
+```html
+<input type="text" id="search" />
+```
+ 2. Créer une div pour les résultats :
+```html
+<div id="results"></div>
 ```
