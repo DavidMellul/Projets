@@ -5,5 +5,5 @@ script php. On peut naviguer entre les résultats avec les fléches directionnel
 
 <b>Pour l'utiliser :</b>
 <p>
-  1. Créer un input : <pre> <input type="text" id="search" /> </pre>
-  2. Créer une div pour les résultats : <pre> <div id="results"></div> </pre>
+  1. Créer un input : '''<pre> <input type="text" id="search" /> </pre>'''
+  2. Créer une div pour les résultats : '''<pre> <div id="results"></div> </pre>'''
