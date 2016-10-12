@@ -7,7 +7,7 @@
 </p>
   Pour toute demande : david.mellul@outlook.fr
 <p>
-  <b><em>nota-bene :</em></b>En cas d'erreur de ma part, je serais ravi d'être corrigé.
+  <b><em>nota-bene : </em></b>En cas d'erreur de ma part, je serais ravi d'être corrigé.
 </p>
 
 # Projets
