@@ -6,9 +6,9 @@ Il s'agit de projets couvrant une multitude de thèmes différents, réalisés d
 # Projets
 
 - C
-  - <strong>ls-reloaded : Une reproduction basique de la commande ls sur Linux.
-  - <strong>tail-reloaded : Une reproduction basique de la commande tail sur Linux.
-  - <strong>A venir : Une reproduction basique du bash sur Linux.
+  - <b>ls-reloaded </b>: Une reproduction basique de la commande ls sur Linux.
+  - <b>>tail-reloaded </b> : Une reproduction basique de la commande tail sur Linux.
+  - <b>>A venir : </b> Une reproduction basique du bash sur Linux.
 - C++
   - <strong>Spirographe</strong> : Un dessineur de courbes automatique inspirée du jouet intitulé Spirographe.
   - <strong>BFI </strong>: Un interprêteur de BrainFuck.
