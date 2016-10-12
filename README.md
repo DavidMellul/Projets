@@ -3,8 +3,10 @@
 <p>
   Ce dépot GitHub est un recueil de tous les projets que j'ai réalisés à but éducatif.<br />
   Il s'agit de projets couvrant une multitude de thèmes différents, réalisés dans différents langages de programmation.<br />
-  J'espère que mes codes pourront aider ceux qui les consultent. <br /><br /></p>
-  Pour toute demande :  [Contactez-moi](mailto:david.mellul@outlook.fr)
+  J'espère que mes codes pourront aider ceux qui les consultent. <br /><br />
+</p>
+  Pour toute demande :
+   [Contactez-moi](mailto:david.mellul@outlook.fr)
 <p>
   <b><em>nota-bene :</em></b>En cas d'erreur de ma part, je serais ravi d'être corrigé.
 </p>
