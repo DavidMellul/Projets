@@ -6,7 +6,7 @@
   J'espère que mes codes pourront aider ceux qui les consultent. <br /><br />
 </p>
   Pour toute demande :
-   [Contactez-moi](mailto:david.mellul@outlook.fr)
+   [david.mellul@outlook.fr](mailto:david.mellul@outlook.fr)
 <p>
   <b><em>nota-bene :</em></b>En cas d'erreur de ma part, je serais ravi d'être corrigé.
 </p>
