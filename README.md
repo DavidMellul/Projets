@@ -30,7 +30,7 @@
   - <b>img </b>: Un éditeur d'images en lignes de commandes.
   - <b>sudoku-checker </b>: Un vérificateur de sudoku.
   - <b>sudoku-generator</b>: Un générateur de sudoku.
-  - <b>backtracking-sudoku (V1 -> V4)</b> : Un résolveur de sudoku par backtracking.
+  - <b>backtracking-sudoku (V1 -> V5)</b> : Un résolveur de sudoku par backtracking.
   - <b>syracuse </b>: Un programme permettant de déterminer le temps de vol d'un nombre dans la suite de Syracuse.
   - <b>fibonacci </b>: Un programme permettant d'afficher la suite de fibonacci.
 - Javascript
