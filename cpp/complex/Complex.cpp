@@ -49,7 +49,9 @@ Complex Complex::operator*(Complex c)
 
 Complex Complex::operator=(Complex c)
 {
-    return Complex(this->m_Re, this->m_Im);
+    this->m_Re = c.getRe();
+    this->m_Im = c.getIm();
+    return *this;
 }
 
 bool Complex::operator>(Complex c)
