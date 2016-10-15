@@ -23,9 +23,9 @@
   - <b>Conway</b> : Une implémentation du jeu de la vie.
   - <b>Particule (V1 & V2) </b>: Un générateur de particules assez simple.
   - <b>ROT13 & ROT47 </b>: Une implémentation de l'algorithme de cryptage par rotation de chaîne.
-  - <b>diff </b>: Une reproduction de la commande diff sur Linux.
+  - <b>diff </b>: Une reproduction de la commande diff sur Linux qui affiche les différences entre deux fichiers.
   - <b>lbr </b>: Une commande permettant de retirer les retours chariot d'un texte.
-  - <b>stats </b>: Une commande permettant d'afficher quelques statistiques textuelles simple d'un texte.
+  - <b>stats </b>: Une commande permettant d'afficher quelques statistiques textuelles simples sur un texte.
   - <b>Mandelbrot </b>: Un programme permettant de visualiser la fractale de Mandelbrot.
   - <b>Complex </b>: Une implémentation des nombres complexes.
 - Python
