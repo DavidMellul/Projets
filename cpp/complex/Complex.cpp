@@ -5,7 +5,7 @@ Complex::Complex()
     this->m_Re = 0;
     this->m_Im = 0;
 }
-Complex::Complex(int Re, int Im)
+Complex::Complex(float Re, float Im)
 
 {
     this->m_Re = Re;
@@ -17,12 +17,12 @@ Complex Complex::clone()
     return *(new Complex(this->getRe(), this->getIm()));
 }
 
-int Complex::getRe()
+float Complex::getRe()
 {
     return this->m_Re;
 }
 
-int Complex::getIm()
+float Complex::getIm()
 {
     return this->m_Im;
 }
@@ -79,12 +79,18 @@ bool Complex::operator<=(Complex c)
     return (*this < c || *this==c);
 }
 
+float Complex::module()
+{
+    return sqrt((this->m_Re*this->m_Re)+(this->m_Im*this->m_Im));
+}
+
 void Complex::display()
 {
     cout << this->m_Re;
     string op = (this->m_Im >= 0) ? " + ":" - ";
     cout << op << this->m_Im << "i" << endl;
 }
+
 
 Complex::~Complex()
 {

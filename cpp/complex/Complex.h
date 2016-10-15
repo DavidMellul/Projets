@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <typeinfo>
+#include <cmath>
 
 using namespace std;
 
@@ -10,10 +11,10 @@ class Complex
 {
     public:
         Complex();
-        Complex(int Re, int Im);
+        Complex(float Re, float Im);
 
-        int getIm();
-        int getRe();
+        float getIm();
+        float getRe();
 
         Complex clone();
 
@@ -29,14 +30,16 @@ class Complex
         bool operator<(Complex c);
         bool operator>(Complex c);
 
+        float module();
+
         void display();
         ~Complex();
 
     protected:
 
     private:
-        int m_Re;
-        int m_Im;
+        float m_Re;
+        float m_Im;
 };
 
 #endif // COMPLEX_H
