@@ -28,6 +28,7 @@
   - <b>stats </b>: Une commande permettant d'afficher quelques statistiques textuelles simples sur un texte.
   - <b>Mandelbrot </b>: Un programme permettant de visualiser la fractale de Mandelbrot.
   - <b>Complex </b>: Une implémentation des nombres complexes.
+  - <b>Julia </b>: Un programme permettant de visualiser la fractale d'un ensemble de Julia.
 - Python
   - <b>img </b>: Un éditeur d'images en lignes de commandes.
   - <b>sudoku-checker </b>: Un vérificateur de sudoku.
@@ -43,6 +44,5 @@
  # A venir 
  
  - Je prévois de réaliser des templates BootStrap pour réaliser des sites avec une expérience utilisateur innovante.
- - J'aimerais également implémenter un visualiseur de la fractale de Julia.
  - Je travaille actuellement sur un jeu de plateformes en 2D (C++ / SDL).
  - J'aimerais réaliser quelques jeux classiques (Snake / 2048 / Tron).
