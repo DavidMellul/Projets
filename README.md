@@ -26,6 +26,8 @@
   - <b>diff </b>: Une reproduction de la commande diff sur Linux.
   - <b>lbr </b>: Une commande permettant de retirer les retours chariot d'un texte.
   - <b>stats </b>: Une commande permettant d'afficher quelques statistiques textuelles simple d'un texte.
+  - <b>Mandelbrot </b>: Un programme permettant de visualiser la fractale de Mandelbrot.
+  - <b>Complex </b>: Une implémentation des nombres complexes.
 - Python
   - <b>img </b>: Un éditeur d'images en lignes de commandes.
   - <b>sudoku-checker </b>: Un vérificateur de sudoku.
