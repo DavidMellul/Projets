@@ -43,6 +43,6 @@
  # A venir 
  
  - Je prévois de réaliser des templates BootStrap pour réaliser des sites avec une expérience utilisateur innovante.
- - J'aimerais également implémenter un visualiseur de fractales (Mandelbrot & Julia)
+ - J'aimerais également implémenter un visualiseur de la fractale de Julia.
  - Je travaille actuellement sur un jeu de plateformes en 2D (C++ / SDL).
  - J'aimerais réaliser quelques jeux classiques (Snake / 2048 / Tron).
