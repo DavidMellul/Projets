@@ -38,9 +38,9 @@
   - <b>fibonacci </b>: Un programme permettant d'afficher la suite de fibonacci.
 - Web
   - <b>Autocomplete </b>: Un utilitaire en JQuery / AJAX / PHP permettant d'autocompléter une saisie au clavier d'après une liste           d'éléments.
-  -<b>Loader </b>: Une suite d'animations de chargement, en CSS uniquement.
-  -<b>Preloader</b>: Une animation de chargement avant l'apparition du site web, avec du Javascript.
-  -<b>Sidenav</b>: Une barre de menu verticale sur le côté que l'on peut ouvrir/fermer, avec du Javascript. 
+  - <b>Loader </b>: Une suite d'animations de chargement, en CSS uniquement.
+  - <b>Preloader</b>: Une animation de chargement avant l'apparition du site web, avec du Javascript.
+  - <b>Sidenav</b>: Une barre de menu verticale sur le côté que l'on peut ouvrir/fermer, avec du Javascript. 
 
  
  # A venir 
