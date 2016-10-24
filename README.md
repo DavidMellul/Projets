@@ -36,10 +36,12 @@
   - <b>backtracking-sudoku (V1 -> V5)</b> : Un résolveur de sudoku par backtracking. En construction.
   - <b>syracuse </b>: Un programme permettant de déterminer le temps de vol d'un nombre dans la suite de Syracuse.
   - <b>fibonacci </b>: Un programme permettant d'afficher la suite de fibonacci.
-- Javascript
+- Web
   - <b>Autocomplete </b>: Un utilitaire en JQuery / AJAX / PHP permettant d'autocompléter une saisie au clavier d'après une liste           d'éléments.
-- PHP 
-  - <b>FormulaireSaisie</b>: Un formulaire quasi-persistant sans fichier ni accès à une base de données.
+  -<b>Loader </b>: Une suite d'animations de chargement, en CSS uniquement.
+  -<b>Preloader</b>: Une animation de chargement avant l'apparition du site web, avec du Javascript.
+  -<b>Sidenav</b>: Une barre de menu verticale sur le côté que l'on peut ouvrir/fermer, avec du Javascript. 
+
  
  # A venir 
  
