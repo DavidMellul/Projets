@@ -1,0 +1,68 @@
+html,body {
+    width:100%;
+    height: 100%;
+}
+
+#Main {
+    position: absolute;
+    left:0;
+    top:0;
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    background: black;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#QuoteZone {
+    display: inline-block;
+    position: absolute;
+    top:40%;
+    left:25%;
+    background: white;
+    width:50%;
+    height:30%;
+    border-radius:1&0%;
+}
+
+#Panel {
+   display: inline-block;
+    position: absolute;
+    top:63.5%;
+    left:40%;
+    background: white;
+    width:20%;
+}
+
+#quote {
+    color:black;
+    font-family: 'MontSerrat',sans-serif;
+    font-size: 1.5em;
+    display: inline-block;
+}
+
+#author {
+    color:black;
+    font-family: 'Open Sans',sans-serif;
+    font-style: italic;
+    font-size: 1.25em;
+}
+
+#randomizer {
+    font-family: "Verdana";
+    font-size: 1.5em;
+    color:white;
+    background: black;
+    border:2px solid black;
+    border-radius: 10%;
+    transition: all 1s;
+    cursor:pointer;
+}
+
+#randomizer:hover {
+    color:black;
+    background: white;
+}
+
+
