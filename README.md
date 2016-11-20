@@ -42,7 +42,10 @@
   - <b>Preloader</b>: Une animation de chargement avant l'apparition du site web, avec du Javascript.
   - <b>Sidenav</b>: Une barre de menu verticale sur le côté que l'on peut ouvrir/fermer, avec du Javascript. 
   - <b>Quote generator</b>: Un générateur de citations en JQuery/AJAX lié à l'API Andruxnet.
-
+- Java
+  - <b>Snake</b>: Le jeu du Snake classique.
+  - <b>Menger</b>: Un programme pour visualiser la fractale de l'éponge de Menger.
+  - <b>Sierpinsky</b>: Un programmer pour visualiser la fractale du triangle de Sierpinsky.
  
  # A venir 
  
