@@ -45,7 +45,7 @@
 - Java
   - <b>Snake</b>: Le jeu du Snake classique.
   - <b>Menger</b>: Un programme pour visualiser la fractale de l'éponge de Menger.
-  - <b>Sierpinsky</b>: Un programmer pour visualiser la fractale du triangle de Sierpinsky.
+  - <b>Sierpinski</b>: Un programmer pour visualiser la fractale du triangle de Sierpinski.
  
  # A venir 
  
