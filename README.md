@@ -46,6 +46,7 @@
   - <b>Snake</b>: Le jeu du Snake classique.
   - <b>Menger</b>: Un programme pour visualiser la fractale de l'éponge de Menger.
   - <b>Sierpinski</b>: Un programmer pour visualiser la fractale du triangle de Sierpinski.
+  - <b>Metaballs</b>: Une implémentation simple des isosurfaces rondes en 2D. (Visuellement proche des cellules du corps humain)
  
  # A venir 
  
