@@ -33,7 +33,7 @@
   - <b>img </b>: Un éditeur d'images en lignes de commandes.
   - <b>sudoku-checker </b>: Un vérificateur de sudoku.
   - <b>sudoku-generator</b>: Un générateur de sudoku.
-  - <b>backtracking-sudoku (V1 -> V5)</b> : Un résolveur de sudoku par backtracking. En construction.
+  - <b>backtracking-sudoku</b> : Un résolveur et générateur de sudoku par backtracking intelligent et optimisé.
   - <b>syracuse </b>: Un programme permettant de déterminer le temps de vol d'un nombre dans la suite de Syracuse.
   - <b>fibonacci </b>: Un programme permettant d'afficher la suite de fibonacci.
 - Web
@@ -47,9 +47,8 @@
   - <b>Menger</b>: Un programme pour visualiser la fractale de l'éponge de Menger.
   - <b>Sierpinski</b>: Un programmer pour visualiser la fractale du triangle de Sierpinski.
   - <b>Metaballs</b>: Une implémentation simple des isosurfaces rondes en 2D. (Visuellement proche des cellules du corps humain)
+  - <b>Pdf Mail Extractor</b>: Un programme permettant d'extraire toutes les adresses email d'un fichier pdf local ou distant.
  
  # A venir 
  
- - Je prévois de réaliser des templates BootStrap pour réaliser des sites avec une expérience utilisateur innovante.
- - Je travaille actuellement sur un jeu de plateformes en 2D (C++ / SDL).
- - J'aimerais réaliser quelques jeux classiques (Snake / 2048 / Tron).
+-  J'aimerais réaliser une plateforme de partage pour étudiants en Java.
