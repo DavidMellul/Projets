@@ -64,6 +64,7 @@ public class MainInterface extends JFrame implements OnClientConnectedListener, 
 	@Override
 	public void onClientDisconnected(Socket s) {
 		m_boiteOnglets.remove(m_listeCanaux.indexOf(s));
+		m_listeCanaux.remove(s);
 	}
 
 }
